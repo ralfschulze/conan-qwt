@@ -31,8 +31,8 @@ class QwtConan(ConanFile):
     default_options = "shared=True", "plot=True", "widgets=True", "svg=True", "opengl=True", \
                         "mathml=False", "designer=True", "examples=False", "playground=False"
     
-    build_requires = "qt/[>4.0]@bincrafters/stable"
-    requires = "qt/[>4.0]@bincrafters/stable"
+    build_requires = "qt/[>4.0,<5.15.0]@bincrafters/stable"
+    requires = "qt/[>4.0,<5.15.0]@bincrafters/stable"
     generators = "qmake", "cmake"
     exports_sources = ["FindQwt.cmake"]
     # exports_sources += "qwt-%s.zip" % self.version
