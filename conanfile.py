@@ -7,7 +7,7 @@ from distutils.spawn import find_executable
 
 class QwtConan(ConanFile):
     name = "qwt"
-    version = "6.1.4"
+    version = "6.1.5"
     license = "Qwt License, Version 1.0 http://qwt.sourceforge.net/qwtlicense.html"
     url = "https://github.com/ralfschulze/conan-qwt"
     description = "The Qwt library contains GUI Components and utility classes which are " \
@@ -31,8 +31,8 @@ class QwtConan(ConanFile):
     default_options = "shared=True", "plot=True", "widgets=True", "svg=True", "opengl=True", \
                         "mathml=False", "designer=True", "examples=False", "playground=False"
     
-    build_requires = "qt/[>4.0,<5.15.0]@bincrafters/stable"
-    requires = "qt/[>4.0,<5.15.0]@bincrafters/stable"
+    build_requires = "qt/[>4.0]@bincrafters/stable"
+    requires = "qt/[>4.0]@bincrafters/stable"
     generators = "qmake", "cmake"
     exports_sources = ["FindQwt.cmake"]
     # exports_sources += "qwt-%s.zip" % self.version
